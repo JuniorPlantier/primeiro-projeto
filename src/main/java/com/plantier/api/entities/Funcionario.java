@@ -40,7 +40,7 @@ public class Funcionario implements Serializable {
 	@Column(name="senha", nullable=false)
 	private String senha;
 	
-	@Column(name="senha", nullable=false)
+	@Column(name="cpf", nullable=false)
 	private String cpf;
 	
 	@Column(name="valor_hora", nullable=true)
@@ -189,7 +189,7 @@ public class Funcionario implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
+		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", cpf=" + cpf
 				+ ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdHorasTrabalhoDia + ", qtdHorasAlmoco="
 				+ qtdHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
 				+ dataAtualizacao + ", empresa=" + empresa + "]";
