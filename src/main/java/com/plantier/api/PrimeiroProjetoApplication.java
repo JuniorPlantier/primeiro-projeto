@@ -1,29 +1,20 @@
 package com.plantier.api;
 
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import com.plantier.api.entities.Empresa;
-import com.plantier.api.repositories.EmpresaRepository;
 
 @SpringBootApplication
 public class PrimeiroProjetoApplication {
 
-	@Autowired
-	private EmpresaRepository empresaRepository; 
+	//@Autowired
+	//private EmpresaRepository empresaRepository; 
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PrimeiroProjetoApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner() {
+	//@Bean
+	//public CommandLineRunner commandLineRunner() {
 		/* -- teste senha
 		return args -> {
 			String senhaEncoded = SenhaUtils.gerarCrypt("macho#23");
@@ -61,8 +52,5 @@ public class PrimeiroProjetoApplication {
 			System.out.println("Empresas: " + empresas.size());
 		};
 		*/
-		return args -> {
-			System.out.println("Opa!");
-		};
-	}
+	//}
 }
