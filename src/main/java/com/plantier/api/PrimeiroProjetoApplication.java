@@ -24,7 +24,7 @@ public class PrimeiroProjetoApplication {
 
 	@Bean
 	public CommandLineRunner commandLineRunner() {
-		/*
+		/* -- teste senha
 		return args -> {
 			String senhaEncoded = SenhaUtils.gerarCrypt("macho#23");
 			System.out.println("Senha encoded: " + senhaEncoded);
@@ -35,6 +35,8 @@ public class PrimeiroProjetoApplication {
 			System.out.println("Senha válida: " + SenhaUtils.senhaValida("macho#23", senhaEncoded));
 		};
 		*/
+		
+		/* -- teste h2
 		return args -> {
 			Empresa emp = new Empresa();
 			emp.setRazaoSocial("Plantier Ltda.");
@@ -57,6 +59,10 @@ public class PrimeiroProjetoApplication {
 			this.empresaRepository.deleteById(1L);
 			empresas = this.empresaRepository.findAll();
 			System.out.println("Empresas: " + empresas.size());
+		};
+		*/
+		return args -> {
+			System.out.println("Opa!");
 		};
 	}
 }
