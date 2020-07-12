@@ -1,9 +1,20 @@
 package com.plantier.api.dtos;
 
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CNPJ;
+
 public class EmpresaDto {
 
 	private Long id;
+	
+	@NotEmpty(message="Razão Social não pode ser vazio.")
+	@Length(min=5, max=200, message="Razão Social deve conter entre 5 e 200 caracteres.")
 	private String razaoSocial;
+	
+	@NotEmpty(message="CNPJ não pode ser vazio.")
+	@CNPJ(message="CNPJ inválido.")
 	private String cnpj;
 	
 	public EmpresaDto() {
